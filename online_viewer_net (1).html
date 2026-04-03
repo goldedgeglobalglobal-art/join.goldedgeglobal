@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Edge Global - Premium Signals</title>
+<style>
+body{margin:0;font-family:Arial;background:#000;color:#fff;text-align:center;overflow-x:hidden}
+.hero{position:relative;padding:80px 20px;background:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3') center/cover no-repeat}
+.hero::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7)}
+.hero-content{position:relative;z-index:2}
+h1{color:gold;font-size:42px;margin-bottom:10px; display:flex; align-items:center; justify-content:center; gap:10px}
+p{color:#ddd}
+.btn{display:inline-block;margin-top:20px;padding:15px 30px;background:gold;color:#000;text-decoration:none;font-weight:bold;border-radius:8px;transition:0.3s}
+.btn:hover{background:#fff}
+.section{padding:50px 20px}
+.card{background:#111;margin:15px auto;padding:20px;border-radius:12px;max-width:420px;box-shadow:0 0 15px rgba(255,215,0,0.2)}
+.timer{font-size:30px;color:red;margin-top:15px}
+.counter{color:#0f0;margin-top:10px}
+.whatsapp-float{position:fixed;bottom:20px;left:20px;background:#25D366;color:#fff;padding:15px 20px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 0 10px rgba(0,0,0,0.5)}
+.popup{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#111;padding:25px;border-radius:12px;display:none;box-shadow:0 0 20px rgba(0,0,0,0.7)}
+.slider{max-width:400px;margin:auto;overflow:hidden}
+.slide{display:none}
+.proof-gallery{display:flex;flex-wrap:wrap;justify-content:center}
+.proof-gallery img{width:200px;margin:10px;border-radius:10px;box-shadow:0 0 10px rgba(255,215,0,0.5)}
+</style>
+</head>
+<body>
+<div class="hero">
+<div class="hero-content">
+<h1>
+  <img src="logo.png" alt="Gold Edge Global Logo" style="height:60px; vertical-align:middle;">
+  Gold Edge Global
+</h1>
+<p>Elite Gold & Crypto Signals for USA & Canada Traders</p>
+<div class="timer" id="countdown"></div>
+<div class="counter" id="users"></div>
+<a href="https://wa.me/1234567890" class="btn">Join WhatsApp Now</a>
+</div>
+</div>
+<div class="section">
+<h2>Why Traders Choose Us</h2>
+<div class="card">✔ 90% Accurate Signals</div>
+<div class="card">✔ Beginner Friendly</div>
+<div class="card">✔ Daily Market Insights</div>
+</div>
+<div class="section">
+<h2>Live Results</h2>
+<div class="slider">
+<div class="slide">📈 +$320 Profit Today</div>
+<div class="slide">📈 +$540 Profit Yesterday</div>
+<div class="slide">📈 +$1100 Weekly Profit</div>
+</div>
+</div>
+<div class="section">
+<h2>Client Reviews</h2>
+<div class="card">"I quit my job after using these signals!"</div>
+<div class="card">"Best trading service ever."</div>
+</div>
+<div class="section">
+<h2>Proof & Results</h2>
+<div class="proof-gallery">
+  <img src="proof1.png" alt="Proof 1">
+  <img src="proof2.png" alt="Proof 2">
+  <img src="proof3.png" alt="Proof 3">
+</div>
+</div>
+<div class="popup" id="popup">
+<h3>⚡ Limited VIP Slots!</h3>
+<p>Join now before it's full</p>
+<a href="https://wa.me/1234567890" class="btn">Join WhatsApp</a>
+</div>
+<a href="https://wa.me/1234567890" class="whatsapp-float">💬 Chat Now</a>
+<script>
+// Countdown
+var time=900;
+setInterval(function(){
+let m=Math.floor(time/60),s=time%60;
+document.getElementById('countdown').innerHTML='Offer Ends In: '+m+':'+(s<10?'0':'')+s;
+time--;},1000);
+// Counter
+var users=150;
+setInterval(function(){users+=Math.floor(Math.random()*4);
+document.getElementById('users').innerHTML=users+' traders joined today';},3000);
+// Popup
+setTimeout(()=>{document.getElementById('popup').style.display='block';},4000);
+// Slider
+let slides=document.getElementsByClassName('slide');let index=0;
+function showSlides(){for(let i=0;i<slides.length;i++){slides[i].style.display='none'}
+index++;if(index>slides.length){index=1}
+slides[index-1].style.display='block';setTimeout(showSlides,2000)}
+showSlides();
+</script>
+</body>
+</html>
